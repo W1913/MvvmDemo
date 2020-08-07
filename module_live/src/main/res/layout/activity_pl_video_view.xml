@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded">
+
+    <com.pili.pldroid.player.widget.PLVideoView
+        android:id="@+id/VideoView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/CoverView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/thumbnail" />
+
+    <LinearLayout
+        android:id="@+id/LoadingView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Buffering"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="onClickSwitchScreen"
+        android:src="@drawable/ic_switch_screen"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/viewOne"
+        android:layout_width="180dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/live_button_shap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="22dp"
+        android:text="买车大侠"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_chuizi"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/number_auction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="100人在竞拍"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <View
+        android:id="@+id/concern"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/live_button_shap_cp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关注"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/concern"
+        app:layout_constraintLeft_toLeftOf="@+id/concern"
+        app:layout_constraintRight_toRightOf="@+id/concern"
+        app:layout_constraintTop_toTopOf="@id/concern" />
+
+
+    <View
+        android:id="@+id/cls"
+        android:layout_width="46dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="104dp"
+        android:background="@drawable/live_button_shap"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清屏"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cls"
+        app:layout_constraintLeft_toLeftOf="@+id/cls"
+        app:layout_constraintRight_toRightOf="@+id/cls"
+        app:layout_constraintTop_toTopOf="@id/cls" />
+
+    <View
+        android:id="@+id/cq"
+        android:layout_width="46dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="52dp"
+        android:background="@drawable/live_button_shap"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="超清"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cq"
+        app:layout_constraintLeft_toLeftOf="@+id/cq"
+        app:layout_constraintRight_toRightOf="@+id/cq"
+        app:layout_constraintTop_toTopOf="@id/cq" />
+
+
+    <View
+        android:id="@+id/close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/live_button_shap"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@id/close"
+        app:layout_constraintLeft_toLeftOf="@+id/close"
+        app:layout_constraintRight_toRightOf="@+id/close"
+        app:layout_constraintTop_toTopOf="@+id/close" />
+
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="22dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_like"
+        app:layout_constraintBottom_toTopOf="@+id/car_bg"
+        app:layout_constraintRight_toRightOf="@+id/close" />
+
+
+
+
+    <View
+        android:id="@+id/car_bg"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/live_car_shap"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="26dp"
+        android:src="@drawable/ic_upglide"
+        app:layout_constraintRight_toRightOf="@+id/car_bg"
+        app:layout_constraintTop_toTopOf="@+id/car_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看详情"
+        android:textColor="@color/colorBlack666"
+        android:textSize="11sp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="@+id/car_bg"
+        app:layout_constraintRight_toRightOf="@+id/car_bg"
+        />
+
+    <ImageView
+        android:id="@+id/car_im"
+        android:layout_width="116dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_car"
+        app:layout_constraintLeft_toLeftOf="@+id/car_bg"
+        app:layout_constraintTop_toTopOf="@+id/car_bg" />
+
+    <TextView
+        android:id="@+id/car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:text="大众朗逸(2017)款"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintLeft_toRightOf="@+id/car_im"
+        app:layout_constraintTop_toTopOf="@+id/car_bg" />
+
+    <TextView
+        android:id="@+id/car_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:text="￥50000"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/car_im"
+        app:layout_constraintTop_toBottomOf="@+id/car_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:text="起"
+        android:textColor="@color/colorBlack666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/car_money"
+        app:layout_constraintLeft_toRightOf="@+id/car_money" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

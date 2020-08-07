@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pro.base">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <provider
+            android:authorities="${applicationId}.KtxInstaller"
+            android:name=".base.Ktx"
+            android:exported="false"/>
+    </application>
+</manifest>

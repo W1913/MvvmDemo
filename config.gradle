@@ -1,0 +1,13 @@
+// Define versions in a single place
+ext {
+    //android开发版本配置
+    android = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.1",
+            applicationId    : "com.zdp",
+            minSdkVersion    : 22,
+            targetSdkVersion : 30,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+}

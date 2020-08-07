@@ -1,0 +1,10 @@
+include ':module_sort'
+include ':module_remind'
+include ':module_home'
+include ':module_my'
+include ':module_live'
+include ':webview'
+include ':common'
+include ':base'
+include ':app'
+rootProject.name = "zdp"

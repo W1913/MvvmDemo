@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kaola.live">
+
+    <application>
+        <activity
+            android:name=".LiveActivity"
+            android:theme="@style/AppThemeFullscreen" />
+        <activity
+            android:name=".PLVideoViewActivity"
+            android:theme="@style/AppThemeFullscreen" />
+
+        <activity android:name=".DemoActivity"/>
+    </application>
+</manifest>

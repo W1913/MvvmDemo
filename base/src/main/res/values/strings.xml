@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MVVMDemo</string>
+    <string name="bottom_name1">首页</string>
+    <string name="bottom_name2">分类</string>
+    <string name="bottom_name3">直播拍卖</string>
+    <string name="bottom_name4">关注提醒</string>
+    <string name="bottom_name5">我的</string>
+    <string name="search">搜索</string>
+</resources>

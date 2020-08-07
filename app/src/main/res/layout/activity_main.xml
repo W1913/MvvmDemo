@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.pro.zdp.vm.MainViewModel" />
+
+        <variable
+            name="click"
+            type="com.pro.zdp.MainActivity.ProxyClick" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/activity_with_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/bnve"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:itemIconTint="@color/selector_item_primary_color"
+            app:itemTextColor="@color/selector_item_primary_color"
+            app:menu="@menu/menu_navigation" />
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/mainViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bnve" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@{viewModel.todoTitle}" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{()->click.toZhiBo()}"
+            android:scaleType="center"
+            android:src="@drawable/menu_live"
+            app:backgroundTint="@android:color/white"
+            app:borderWidth="0dp"
+            app:maxImageSize="60dp"
+            app:elevation="100dp" />
+
+    </RelativeLayout>
+
+</layout>
