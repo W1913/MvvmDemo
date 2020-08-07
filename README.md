@@ -1,6 +1,9 @@
 ## 项目名称
 > 请介绍一下你的项目吧  
-Android项目
+MVVM+Jetpack+组件化+kotlin写（chao）的简单的Demo
+底部凸起按钮简单的结局方案 
+
+其实就是https://github.com/hegaojian/JetpackMvvm剥离出来的 我自己套了一个组件化 
 
 
 ## 运行条件
@@ -28,5 +31,5 @@ Android项目
 > 使用的技术框架或系统架构图等相关说明，请填写在这里  
 
 
-## 协作者
-> 高效的协作会激发无尽的创造力，将他们的名字记录在这里吧
+## 感谢
+https://github.com/hegaojian/JetpackMvvm
