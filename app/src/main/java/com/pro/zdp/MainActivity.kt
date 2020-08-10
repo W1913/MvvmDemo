@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+import com.kaola.common.autoService.LiveAtuoService
 import com.pro.base.base.activity.BaseVmActivity
 import com.pro.base.router.RouterActivityPath
 import com.pro.base.router.RouterFragmentPath
@@ -16,6 +17,7 @@ import com.pro.zdp.vm.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 import me.hgj.jetpackmvvm.demo.app.util.SettingUtil
+import java.util.*
 
 
 /**
@@ -37,8 +39,9 @@ class MainActivity : BaseVmActivity<MainViewModel, ActivityMainBinding>() {
             when (it) {
                 R.id.menu_main -> mainViewpager.setCurrentItem(0, false)
                 R.id.menu_project -> mainViewpager.setCurrentItem(1, false)
-                R.id.menu_system -> ARouter.getInstance().build(RouterActivityPath.Live.PAGER_LIVE)
-                    .navigation()
+                R.id.menu_system -> ServiceLoader.load(LiveAtuoService::class.java).iterator()
+                    .next()
+                    .StartLiveActivity(this)
                 R.id.menu_public -> mainViewpager.setCurrentItem(2, false)
                 R.id.menu_me -> mainViewpager.setCurrentItem(3, false)
             }

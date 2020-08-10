@@ -53,4 +53,6 @@ dependencies {
     api project(':base')
     api project(':webview')
     kapt 'com.alibaba:arouter-compiler:1.2.2'
+    api 'com.google.auto.service:auto-service-annotations:1.0-rc6'
+
 }
