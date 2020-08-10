@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.alibaba.android.arouter.launcher.ARouter
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 import com.kaola.common.autoService.LiveAtuoService
+import com.pro.base.autoService.AutoServiceLoader
 import com.pro.base.base.activity.BaseVmActivity
 import com.pro.base.router.RouterActivityPath
 import com.pro.base.router.RouterFragmentPath
@@ -39,8 +40,7 @@ class MainActivity : BaseVmActivity<MainViewModel, ActivityMainBinding>() {
             when (it) {
                 R.id.menu_main -> mainViewpager.setCurrentItem(0, false)
                 R.id.menu_project -> mainViewpager.setCurrentItem(1, false)
-                R.id.menu_system -> ServiceLoader.load(LiveAtuoService::class.java).iterator()
-                    .next()
+                R.id.menu_system -> AutoServiceLoader.load(LiveAtuoService::class.java)
                     .StartLiveActivity(this)
                 R.id.menu_public -> mainViewpager.setCurrentItem(2, false)
                 R.id.menu_me -> mainViewpager.setCurrentItem(3, false)
